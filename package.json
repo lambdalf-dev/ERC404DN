@@ -1,0 +1,21 @@
+{
+  "name": "ERC404DN",
+  "version": "1.0.0",
+  "description": "An experimental combination of ERC721 and ERC20",
+  "main": "index.js",
+  "author": "Lambdalf the White <lambdalf.dev@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "lint": "forge fmt",
+    "test:verbose": "forge test -vvvv",
+    "coverage": "forge coverage --contracts contracts --report lcov; genhtml lcov.info --branch-coverage --output-directory foundry-coverage",
+    "deploy:sepolia": "forge script ./script/DeployScriptTest.sol:DeployScript --broadcast --verify --rpc-url sepolia"
+  },
+  "dependencies": {
+    "@lambdalf-dev/ethereum-contracts": "^2.0.2",
+    "solady": "^0.0.167"
+  }
+}
